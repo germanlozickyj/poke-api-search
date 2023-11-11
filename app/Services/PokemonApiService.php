@@ -34,7 +34,6 @@ class PokemonApiService {
                 $httpClient->get($url);
             }
         });
-
         $data = array_map(function($response) {
             if ($response->successful()) {
                 $response_data = json_decode($response->body(), true);
